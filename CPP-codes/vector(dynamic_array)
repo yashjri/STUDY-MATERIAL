@@ -1,0 +1,46 @@
+#include <iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+
+int main()
+{
+    vector<int> vec;
+    vec.push_back(100);
+    vec.push_back(200);
+    vec.push_back(300);
+    vec.push_back(0);
+
+    cout<<"Vector size -->"<<vec.size()<<endl;
+    cout<<"Vector capacity -->"<<vec.capacity()<<endl;
+
+    vec[3]=400;
+     cout<<"Element of vector -->"<<endl;
+    for(int element : vec)
+        {
+            cout<<" "<<element<<endl;
+        }
+    cout<<endl;
+
+    sort(vec.begin(),vec.end());
+    vec.pop_back();
+    if(vec.empty())
+    {
+        cout<<"Empty vector"<<endl;
+    }
+    else
+    {
+        cout<<"Not empty vector"<<endl;
+    }
+
+    vec.clear();
+    if(vec.empty())
+    {
+        cout<<"Empty vector"<<endl;
+    }
+    else
+    {
+        cout<<"Not empty vector"<<endl;
+    }
+    return 0;
+}

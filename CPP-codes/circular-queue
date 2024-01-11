@@ -1,0 +1,100 @@
+#include <iostream>
+#define  n 100
+using namespace std;
+
+class cqueue
+{
+ private:
+           int *arr,front,rear,maxsize,currsize;
+ public :
+           cqueue(int size)
+{
+    maxsize=size;
+    arr=new int[maxsize];
+    front=-1;
+    rear=-1;
+    currsize=0;
+}
+
+~cqueue()
+{
+    delete[] arr;
+}
+
+bool isEmpty()
+{
+    return currsize==0;
+}
+
+bool isFull()
+{
+    return currsize==maxsize;
+}
+
+void enqueue(int data)
+{
+    if(isFull())
+    {
+        cout<<"Queue is full"<<endl;
+        return;
+    }
+    rear=(rear+1)%maxsize;
+    arr[rear]=data;
+    if(front==-1)
+    {
+        front=rear;
+    }
+    currsize++;
+}
+
+void dequeue()
+{
+    if(isEmpty())
+    {
+        cout<<"Queue is empty"<<endl;
+        return ;
+    }
+    if(front==rear)
+    {
+        front=-1;
+        rear=-1;
+    }
+    else
+    {
+        front=(front+1)%maxsize;
+    }
+    currsize--;
+}
+
+int getFront()
+{
+    if(isEmpty())
+    {
+        cout<<"Queue is empty"<<endl;
+        return -1;
+    }
+    return arr[front];
+}
+
+int getRear()
+{
+    if(isEmpty())
+    {
+        cout<<"Queue is empty"<<endl;
+        return -1;
+    }
+    return arr[rear];
+}
+};
+
+int main()
+{
+    cqueue q1(3);
+    q1.enqueue(100);
+    q1.enqueue(200);
+    q1.enqueue(300);
+    cout<<"front-->"<<q1.getFront()<<endl;
+    cout<<"Rear-->"<<q1.getRear()<<endl;
+    q1.dequeue();
+    return 0;
+}

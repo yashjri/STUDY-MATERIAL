@@ -1,0 +1,55 @@
+
+Vectors in C++ provide a variety of operations for manipulating and working with dynamic arrays. Here's an overview of some common vector operations:
+
+Declaration and Initialization:
+
+Declaration: You declare a vector with a specific data type, such as vector<int> myVector;, where int is the data type. You can also initialize a vector with values during declaration, like vector<int> myVector = {1, 2, 3};.
+Adding Elements:
+
+push_back(element): Adds an element to the end of the vector.
+insert(iterator, element): Inserts an element at a specific position indicated by the iterator.
+Accessing Elements:
+
+at(index): Returns the element at the specified index with bounds checking. It throws an exception if the index is out of range.
+operator[]: Provides direct access to elements by index without bounds checking. Be cautious with this as it doesn't verify if the index is valid.
+front(): Returns the first element of the vector.
+back(): Returns the last element of the vector.
+Modifying Elements:
+
+at(index) = newValue: Modifies the element at the specified index.
+operator[] = newValue: Modifies the element at the specified index (without bounds checking).
+assign(count, value): Assigns new values to the vector, replacing the existing elements.
+Removing Elements:
+
+pop_back(): Removes the last element from the vector.
+erase(iterator): Removes the element at the specified position indicated by the iterator.
+erase(startIterator, endIterator): Removes a range of elements between the specified iterators.
+Size and Capacity:
+
+size(): Returns the number of elements in the vector.
+capacity(): Returns the current storage capacity of the vector.
+reserve(newCapacity): Adjusts the capacity to at least the specified value.
+Checking for Empty:
+
+empty(): Returns true if the vector is empty, false otherwise.
+Iterating Through the Vector:
+
+You can use for loops, iterators, or range-based for loops to traverse the vector elements.
+Clearing the Vector:
+
+clear(): Removes all elements from the vector, leaving it empty.
+Swapping Vectors:
+
+swap(otherVector): Swaps the contents of two vectors efficiently.
+Sorting:
+
+sort(beginIterator, endIterator): Sorts a portion of the vector using iterators.
+You can also use std::sort from the <algorithm> library to sort the entire vector.
+Searching:
+
+find(value): Searches for the first occurrence of value in the vector and returns an iterator to it.
+count(value): Counts the number of occurrences of value in the vector.
+Resizing:
+
+resize(newSize): Changes the size of the vector. If it grows, new elements are added with default values; if it shrinks, elements are removed.
+These are some of the most commonly used operations with vectors in C++. Vectors are versatile and provide dynamic resizing, making them a powerful choice for managing collections of data.
