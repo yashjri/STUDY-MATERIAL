@@ -1,0 +1,7 @@
+print("Enter details of student\n")
+name=input("Enter you name\t")
+num=int(input("Enter your roll number as per your registration number\n"))
+f_name=input("Enter your father's name\t")
+address=input("Enter your address as per on Aadhar-card\n")
+dob=input("Enter your date of birth\n")
+print("*"*20)
