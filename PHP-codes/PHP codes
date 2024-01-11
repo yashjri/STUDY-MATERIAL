@@ -1,0 +1,433 @@
+<?php
+
+echo "first unit php\n";
+print "we will cover every topic in this program unit wise\n";
+/*
+second unit 
+1. basic syntax
+2. variable
+3. constant
+4. data types 
+5. operators
+6. expression 
+*/
+echo"let's learn about the basic syntax of declaring the variable\n";
+// variable always declare using the '$' sign 
+$num1=100;
+echo"this will print the num which is a variable- ","$num1","\n";;
+// lets create a variable which contains the char data types
+$name="Manan";
+echo"The char data we declare using is ","$name","\n";
+echo"let's learn how to assign the variable and how to use in two different ways\n";
+$first="Peter";
+// now lets assign the value of the first in to another variable using assign by reference
+$fname=&$first;  // this take the value by reference
+//echo"$fname";  // this will print that value which is being assign using the reference from another variable
+// let's change the $fname value using assign value method and then we print the output using the echo
+$fname="Scott";
+// now the value of fname is change from peter to scott by assign the value 
+echo"$fname\n";
+//let's learn this concept more better using a proper example 
+
+/*
+syntax :   $GLOBALS['name_of_the_variable'];
+
+*/
+function show()
+{
+    $sec="Becky";
+    //echo"the value of show's variable is --","$sec","\n";
+    echo "the value of new variable is " . $sec . " " . $GLOBALS['fname'] . "\n";
+    // by using this we can print becky scott togther which is more appropriate than printing two names seprately
+}
+show();
+
+
+
+function increment()
+{
+    static $super=80;
+    $super++;
+    $super++;
+    $super++;
+    $super++;
+    echo"the value of static variable is --> "."$super"."\n";
+}
+increment();
+/*
+CONSTANT --->
+let's learn how to declare a constant in the php 
+syntax :-
+          define("name of constant",value of constant,[case insenstive]);
+the case insenstive parameter is not compulsory to add in the syntax it is optional
+we have to remember that whenever we are simple just using any constant we have to use it with dot notation instead
+of defining like simple variable.
+*/
+define("car","Dodge");
+echo"the name of the car is ".car;
+echo"\n";
+echo "this is the example for the operators in the php \n";
+// this will print the sum of those two numbers
+echo "the sum is --> ",4+5,"\n";
+// this will print the difference is 
+echo "the minus is--> ",5-4,"\n";
+// this will print the product 
+echo "the product is --> ",5*4,"\n";
+// this will print the division 
+echo "the divison is --> ",5/4,"\n";
+// these are the some examples of operators in the php we will use other whenever there is need in a program
+$num1 = 10;
+$num2 = 5;
+
+
+/*
+boolean data types :- true or false 
+maths=c++ false 
+100=100 true 
+var_dump();
+
+*/
+var_dump($num1 == $num2);     
+var_dump($num1 === $num2);   
+var_dump($num1 != $num2);    
+var_dump($num1 !== $num2);    
+var_dump($num1 > $num2);     
+var_dump($num1 < $num2);     
+var_dump($num1 >= $num2);
+var_dump($num1 <= $num2);
+echo"Let's learn about the expression which is the last part of our unit\n";
+// let's make an example of expression in php 
+function name()
+{
+    return "Manan";
+}
+$call=name();
+echo"My name is ","$call","\n";
+// the above function is an example of expression in php
+/*
+Let's learn about the statement we are going to use in php like conditional , looping statements.
+if , if-else, if-elseif , switch , while , for 
+break , continue etc
+*/
+// lets start with if statement
+$nums=299;
+if($nums>400)
+{
+    echo"this is if statemnt\n";
+    // as this is not according to our value so this will not print
+}
+// now the if-else statemnt
+$n="Manan";
+if($n="max")
+{
+    echo"the name is of some american guy\n";
+}
+else
+{
+    echo"the name is of hindu guy\n";
+}
+// now let's do with if else if statemnt
+$age=10;
+if($age>20)
+{
+    echo"yes you can do vote\n";
+}
+elseif($age>=25)
+{
+    echo"you can vote as you are eligible\n";
+}
+else
+{
+    echo"you can't vote\n";
+}
+// now start with for loop 
+for ($i = 1; $i <= 5; $i++) 
+{
+    echo "Manan god $i\n";
+}
+// now with while loop
+$count = 1;
+while ($count <= 5) 
+{
+    // this will run only 5 times
+    echo"this is while loop\n";
+    echo "Count: $count\n";
+    $count++;
+}
+// now with do while loop
+$count = 1;
+do 
+{
+    echo "Count: $count\n";
+    $count++;
+} while ($count <= 5);
+// now let's start with foreach loop 
+$cars = array("Alpina", "Benz", "Opel");
+foreach ($cars as $cars) 
+{
+    echo $cars . "\n";
+}
+// now break statemnt
+for ($i = 1; $i <= 10; $i++) 
+{
+    if ($i == 5) 
+    {
+        break;
+    }
+    echo $i . "\t";// t is stands for tab in line means leaving a certain space
+    
+}
+// now continue statemnt
+echo"\n"; 
+echo"\n"; 
+for ($i = 1; $i <= 5; $i++) 
+{
+    if ($i == 3) 
+    {
+        continue;
+    }
+   
+    echo $i . "\n";
+}
+// now return statemnt
+function isPositive($number) 
+{
+    if ($number > 0) 
+    {
+        return "Positive\n";
+    } else 
+    {
+        return "Negative\n";
+    }
+}
+echo isPositive(5);
+// now its time for start with the arrays in php 
+/*
+ARRAYS
+array is a data structure that allows you to store multiple values in a single variable 
+In PHP, arrays can hold values of different types such as numbers, strings, or even other arrays
+They provide a convenient way to group related data together
+there are also some types of array we are going to perform 
+1. numeric array
+2. associative arrays
+3. multidimensional arrays
+4. indexed arrays
+ we have to remember that for accessing the element or data within the array we use index of that element or data
+ and each index is always start from 0 instead of 1 
+*/
+
+
+// numeric array
+$numbers = array(2, 4, 6, 8, 10);
+// Accessing array elements
+echo $numbers[0];
+echo $numbers[3]; 
+// Modifying array elements
+$numbers[1] = 3;
+$numbers[4] = 12;
+//looping through the array
+foreach ($numbers as $number) 
+{
+    echo $number . "\n";
+}
+echo"\n";
+
+//  associative array
+$person = array(
+    "name" => "Manan",
+    "age" => 23,
+    "email" => "chawlamanan26@gmail.com"
+);
+echo "Name: " . $person["name"] . "\n";
+echo "Age: " . $person["age"] . "\n";
+echo "Email: " . $person["email"] . "\n";
+echo"\n";
+
+// indexed array
+$fruits = array("Apple", "Banana", "Orange");
+// Accessing array elements
+echo "First fruit: " . $fruits[0] . "\n";
+echo "Second fruit: " . $fruits[1] . "\n";
+echo "Third fruit: " . $fruits[2] . "\n";
+echo"\n";
+
+// multidimensional array
+$matrix = array
+(
+    array(1, 2, 3),
+    array(4, 5, 6),
+    array(7, 8, 9)
+);
+// Accessing array elements
+echo "Element at row 1, column 2: " . $matrix[1][2] . "\n";
+echo "Element at row 2, column 0: " . $matrix[2][0] . "\n";
+echo "Element at row 0, column 1: " . $matrix[0][1] . "\n";
+echo"\n";
+
+
+$I="max";
+var_dump($I);
+
+
+echo "\n";
+// let's learn about the strings in the php 
+/*
+STRINGS
+strings are collection of characters , each strings element have index number which helps user to access any particular 
+element and index always start from zero .
+*/
+
+// creation of strings
+$strings="hello manan";
+
+// now lets learn how to access any string
+echo"$strings\n";
+// by using index we can access any element in strings
+echo"$strings[4]\n"; // this will print 'o' from the hello manan
+
+// now lets see how to manipulate the element in strings
+echo substr($strings, 7, 5); // by using this we are dividing the string from specific position 
+echo"\n";
+// now lets perform some inbuilt function in the php for strings
+
+// string length function
+$word="hi people of america \n";
+$len= strlen($word);
+echo "$len\n";
+
+// string concatenation
+$s1="hello";
+$s2="peter its me";
+$mix=$s1.",".$s2;
+echo"$mix\n";
+
+// convert to upper letters
+$one="hiiiiii";
+$new=strtoupper($one);
+echo"$new\n";
+
+// convert to lower letters
+$old="HELLO";
+$small=strtolower($old);
+echo "$small\n";
+
+
+// to replace a strings
+$re="why humans are curel?\n";
+$re2=str_replace("humans","Villan",$re);
+echo"$re2\n";
+
+// to seprate the strings
+$n1="Optimas,prime";
+$n2=explode(",",$n1);
+print_r($n2);       // print_r is  a inbuilt function used to represent the output as a array
+
+// to make an array of strings in single line
+$i1=array("Optimas","Megatron");
+$t=implode(",",$i1);
+echo("$t\n");
+
+
+/*
+ FUNCTION IN php
+ function are used to perform a certain task in a order or sequence , for defining a function we use 
+ 'function' keyword .
+ function are able to take parameter with them using the parentheses , and for taking more than one parameter
+ with function we use commas to seprate them easily .
+ syntax : - >          function function_name(parameter_list)
+                                {
+                                    //body of the function
+                                    // code  to be executed 
+                                    // return statemnt (optional)
+                                }
+ To call a function in php we just call it normally uisng the parentheses , if there are any parameter present 
+ then we will pass parameter also .
+ syntax :->   function_name(parameter_list);
+*/
+
+// let's learn how to create a function and how to call it
+ function result()
+ {
+     $m1=100;
+     $m2=200;
+     $res=$m1+$m2;
+     echo"$res\n";
+ }
+ result();
+
+// let's learn how to pass parameter using function
+function greet($name)
+{
+    echo"hello!,".$name;
+    echo"\n";
+}
+greet("Alice");
+
+// lets learn how to return statment using function's return statment method
+function calc($num)
+{
+    $sq=$num*$num;
+    return $sq;
+}
+$num01=calc(5);
+echo"the value of square is --> $num01\n";
+
+
+// let learn how to use the global variable
+$a=100;
+function test()
+{
+    global $a;        // by using this we can use global variable anywhere in the codes
+    echo"variable 's value is : $a\n";
+}
+test();
+
+/*
+         SUPER GOLBAL VARIABLE 
+there are some predefined variable or array in php that are able to accesible anywhere in the code 
+they are called 'super global ' because of this.
+even we dont need to define them using global keyword
+types of super global variable
+1.$_GET ->  this contain variable passed to the current script via URL parameter
+2.$_POST -> this contains variable passed to current script via http post method used for handling form 
+             submission 
+3.$_REQUEST -> this contains the content of both GET and POST method and it also contains the content of $_COOKIE
+               it basically hold the value from both url parameter and form submission.
+*/
+
+/*        IMPORTANT NOTE 
+   while using these method whenever we are creating form for getting vital information such as password , email , 
+   bank details we should use $_POST method instead of $_GET method as it doesn't display the result on URL section.
+*/
+
+/*              FORM DATA HANDLING 
+
+steps to done for data handling in php using the super global variable
+A. create html form
+B. submit the form
+C. process the form data in php 
+D. sanitize and validate the form data
+E. handle the form data
+*/
+
+
+/* SYNTAX FOR SUPER GLOBAL VARIABLE
+
+1. $_GET --->    $_GET ['parameter_name'];
+2. $_POST --->   $_POST ['field_name'];
+3. $_REQUEST ---> $_REQUEST ['parameter_name'];
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
