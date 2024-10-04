@@ -1,0 +1,310 @@
+#what is java?
+-> Java is one of the most popular programming language in tech industry.
+->Java is developed by the Sun Microsystem.
+->Oops is the core base of java,as its base is OOPS it is very structured and managable programming language.
+->Java is used in various field including Mobile App Development, desktop apps and even web applications.
+->Java is an platform independent language which means it can run on any OS whether it is Windows , Mac os and Linux etc.
+
+#write 5 advantage of java?
+1. It can run on any OS or platform.
+2. Easy to manage and well structured because of OOPS.
+3. Better memory allocation.
+4. Provide various security features.
+5. Does have inuild exception handling.
+
+#write 5 disadvantage of java?
+1. SLower than some programming language.
+2. More overhead than other programming language.
+3. More verbose than c/c++ or other language.
+4. Require extra files to run.
+5. Not easy to understand for beginners.
+
+#write 5 characterstics of java?
+1. OOPS based -> as it is based on oops concept it can be used in creating complex program and make it more easy to understand for developers.
+2. Memory allocation -> it is better than other language in terms of memory which makes codes or program to run efficienty.
+3. Exception handling -> java have inbuilt exception handling features to handle various type of error.
+4. Multithreading -> this feature support various thread or unit of program to run independently depending on other thread.
+5. Platform independent -> It can be run on any OS.
+
+#write about data types in java?
+A.INTEGER data type -> there are 4 types of integer data in java and each have their own width and values.
+INT width--32
+LONG width--64
+SHORT width--16
+BYTE width--8
+
+these data types define which type of operation can be perfromed on the variables.
+
+B.Floating Point-> these are also known as real number or fraction based,as these are used to define point or fraction value.
+it hvae 2 types and difference between those 2 types is just of by values after the point.
+FLOAT width--32
+DOUBLE width--64
+
+C.Character -> these are single value based data types,mostly used to represent the alphabet or special character like $,# etc.
+character are defines in 2 types single and string(array of character).
+java use uni code to define the character,'char' is keyword use to define it and its range from 0-65 and there are no negatiVe character.
+CHAR width--16
+
+D.Boolean -> these are only 2 value '0' and '1', these are primitive data types and mostly used for Logical values.
+'bool' keyword is used to define it and 'true' and 'false' are also its value.
+
+# explain about variables in java.
+variables is like a storage area where user or developers can store data of various types lke int,char,float etc.
+variables are used to manipulate data as it store various data in it.
+SYNTAX:- data_type variable_name;
+            or
+        data_type variable_name=value;
+ex:-    int roll=100;
+        String name="Yash";
+
+there are 3 types of variable scope we are going to use in java.
+A.Local scope :- these are also called as local variable,declare inside a method and can or only be use in that method.
+                they are accessible to only those which are in that method.
+                Ex:- public void some_method()
+                {
+                    String name="yash";
+                    System.out.println(name);
+                }
+B.Instance scope :- these are called as instance variable,declare inside the class and can be accessible to any method which is in that class.
+                Ex:- public class MyClass
+                    {
+                        int roll=100;
+                        public void main(String[]args)
+                        {
+                            System.out.println(roll);
+                        }
+                    }
+C.Class scope :- these are called as static variable,declare outside the method or inside the class and 'static' keyword is used to define it.
+                    the value of such variable cannot be change in any method.
+                    Ex:-public class one
+                    {
+                        static int x=10000;
+                        public void main(String[]args)
+                        {
+                            System.out.println(x);
+                        }
+                    }
+
+#explain about operator in java.
+operator are the symbol used to perform operation on the operands, or we can say that by using these operator we can manipulate the value of any operands or variable.
+there are major 4 types of operator we are going to use it java.
+
+A.Arithmetic operator:- these include--> +  -  /  * %
+A.Logical operator:- these include--> & || !
+A.Relational operator:- these include--> = == > < >= <=  *= !
+A.Bitwise operator:- these include--> & <<<  >>> ^ ^= >> <<
+
+#explain various statement in java
+A.If-statement : in this statement we create a method where we have to put a condition, if the input match or satisfy the condition then the statement inside that method will execute.
+SYNTAX:- if(condition)
+    {
+        statement;
+    }
+
+B.If-else statement : in this statement we create a method where we have to put a condition, if the input match or satisfy the condition then the statement inside that method will be execute
+                        and if not then the condition inside the else will be execute.
+SYNTAX:- if(condition)
+        {
+            statement 1;
+        }
+        else
+        {
+            statement 2;0
+        }
+
+C.Switch statement :- in this statement allows a program to evaluate the value of expression and based on that value,execute a specific block of code among multiple alternatives.
+SYNTAX:- switch(expression)
+        {
+            Case 1:
+                    statement 1;
+            break;
+
+            Case 2:
+                    statement 2;
+            break;
+            .
+            .
+            .
+            .
+            Case n:
+                    statement n;
+            break;
+
+            default : // this will be execute if other cases are matched;
+        }
+
+D.While loop : it is one of the looping statement which run until the condition is not fulfilled.
+SYNTAX:- while(condition)
+            {
+                statement;
+            }
+
+E.DO-while loop : in this condition is checked after the execution of the loop body.this means that the loop body will always be executed
+                    atleast once, even if the condition is false.
+SYNTAX:- do{
+    statment;
+}while(condition);
+
+F.For loop : this loop contains a initilizaion,condition,updation.In this loop will be initilize at a value and it will follow until the 
+                condition is satisfy after this updation will be done.
+SYNTAX : for(initilization; condition; updation)
+        {
+            statement;
+        }
+
+G. For-each loop : it also known as an enhanced for loop, is a concise and readable way to iterate over elements in an array, collection or other iterable objects.
+SYNTAX : for(elementType element : iterable)
+            {
+                //code to be executed
+            }
+
+H. Break : This statement is used to exit prematurely from a loop (eg. for while or do-while) or a switch statment.
+
+I. Continue :- This statement is used to skip the rest of the code in the current iteration of the loop and move to the next iteration.
+
+J. Return :- This statement is used to exit from a method and return a value(if the method has a non-void return type).
+
+#what is array? explain in java with its types.
+->Array refers as collection of same data, it store same type of data in a manner so that each element inside the array have its own index and each element will be access by that index.
+Index of array start from 0, it means if there are 6 element in the array then index will be from 0 to 5.
+2 types of array
+A. single dimension array: This is also called as linear array as it store element in a linear manner.
+SYNTAX: data_type[] array_name={elements};
+
+        for accessing element we use the index of that element -->
+        System.out.println(array_name[index]);
+
+        For modifying the element in array -->
+        array_name[index] = new_value;
+
+B. Multi-dimension array : this is called as 2d or matrix as it store element in 2 dimensional ('x' and 'y' axis).
+SYNTAX: data_type array_name[size of row] [size of column].
+
+        for accessing element we use the index of that element -->
+        System.out.println(array_name[row's index] [column's index]);
+
+        For modifying the element in array -->
+        array_name[row's index][column's index] = new_value;
+
+#Explain about string and its various operation.
+->String refers as collection of character(we can refer it as a array of character).
+->'String' keyword is used to define it.
+SYNTAX:- String_data_type String name="value";
+
+There are various operation on string some of them are:
+
+A. Defining a String :
+SYNTAX : String string_name = "value";
+Ex - String name = "Yash";
+
+B. Modifying String :
+SYNTAX : String_name = "new value";
+EX - name="Yash Singh"; // previously it was just "Yash".
+
+C. Length of string:
+->By using this we can find the length of string
+SYNTAX:-System.out.println(String_name.length());
+EX - String car = "TATA";
+System.out.println(car.length());  // 4
+
+D. Concatenation :
+-> By using this we can add 2 or more string together, using '+' sign.
+SYNTAX : String_3 = String_1 + String_2;
+EX - String First="Yash";
+     String Second="Singh";
+    String full = First + Second;
+    System.out.println(full); //yash singh
+
+E. Index of any character :
+->We can find the index of any character using a inbuilt function called as indexof() :
+-> This is a inbuilt function,in which we have to put that character and we will find its index.
+EX - String cars = "Ford bronco";
+    System.out.println(cars.indexof(B));
+    // this will print index '5'
+
+F. Changing case of string :
+-> When we want to change a lowercase string to uppercase we use touppercase() function and when we want to change upper to lower we use tolowercase().
+EX - String c1= "TATA";
+    String c2= "Ford";
+    String LO = c1.tolowercase();
+    String UP = c1.touppercase();
+    System.out.println(LO);
+    System.out.println(UP);
+
+G. Comparing String :
+-> To check whether 2 string are equal or not we use a inbuilt function called as .equal();
+EX - String f="TATA";
+     String s="tata";
+    String c=f.equals(s);
+    System.out.println(c);
+
+I. Conversion String :
+-> By using this we can convert other data types into string by using inbuilt function.
+Ex -  int num = 100;
+    String numstr = Integer.toString(num);
+    System.out.println(numstr);
+
+#Explain about the Stringbuffer and various operation.
+->Stringbuffer is the peer class of string, the major difference between string and Stringbuffer is that Stringbuffer is mutable and growable.
+->'Stringbuffer' keyword is used to declare it.
+SYNTAX:- Stringbuffer variable_name= new Stringbuffer("value");
+
+Some operations are :-
+A. length : For getting the length of Stringbuffer we use length() function.
+SYNTAX :- Stringbuffer variable_name = new Stringbuffer("value");
+            int len = variable_name.length();
+            System.out.println(len);
+
+B. Capacity : For getting number of allocated character in string, the default capacity of any string is 16.
+-> in this 16 we will add the number of character,then we get the capacity of that Stringbuffer.
+-> 'Capacity()' is the inbuilt function we used.
+SYNTAX :- Stringbuffer variable_name= new Stringbuffer("value");
+            int cap = variable_name.Capacity();
+            system.out.println(cap);
+
+C. Append : For adding another Stringbuffer after the existing Stringbuffer we use .append() function.
+SYNTAX :- Stringbuffer variable_name= new Stringbuffer("value");
+            variable_name.append("after_Value");
+
+D. Delete : For deleting the specific number of character in a sequence we use delete() function.
+-> we have to put start index and end index.
+SYNTAX :- Stringbuffer variable_name = new Stringbuffer("value");
+            variable_name.delete('start_index','end_index');
+            system.out.println(variable_name);
+
+E. Reverse : For Reversing the whole string we use reverse() function.
+SYNTAX :- Stringbuffer variable_name = new Stringbuffer("value");
+            variable_name.reverse();
+            system.out.println(variable_name);
+
+FOR ACCESSING METHODS WE USE THIS.
+SYNTAX :- object.name.method_name();
+
+ex:- class First
+{
+    int roll;
+    public person(int r)
+    {
+        this.r=roll;
+    }
+    public void display()
+    {
+        system.out.println("this is the roll number" + r);
+    }
+}
+//now use this class in the main function
+public class one
+{
+    public static void main(String[] args)
+    {
+        First f1= new First();
+        f1.person(20);
+        f1.display();
+    }
+}
+
+#Explain about classes and objects in java.
+-> Class can be refer as a template of object or collection of various method/scope while on other hand objects are the instance of class.
+-> For declaring the classes in java we use 'class' keyword and there are 4 access specifier which help us to manage the objects and class, as there are some parts which
+should not be available to every one except the developer.
+SYNTAX :- 
